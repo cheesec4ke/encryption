@@ -9,7 +9,7 @@ fun main() {
                     val input = readln()
                     print("Input encryption length from 1 to 256: ")
                     while (true) {
-                        val key = readln().toInt()
+                        val key = readln().toInt() - 1
                         if (key in 0..255) {
                             println(enc(input, key))
                             break
@@ -30,6 +30,11 @@ fun main() {
 
                 "3" -> {
                     println("\n\to/\n");print(0 / 0)
+                }
+
+                "4" -> {
+                    println("\u0394")
+                    break
                 }
 
                 else -> {
