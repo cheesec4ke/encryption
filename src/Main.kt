@@ -29,7 +29,7 @@ fun main() {
                 }
 
                 "3" -> {
-                    println("\no/\n");print(0 / 0)
+                    println("\n\to/\n");print(0 / 0)
                 }
 
                 else -> {
