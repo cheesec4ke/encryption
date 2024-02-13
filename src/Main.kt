@@ -32,6 +32,11 @@ fun main() {
                     println("\n\to/\n");print(0 / 0)
                 }
 
+                "4" -> {
+                    println("\u0394")
+                    break
+                }
+
                 else -> {
                     print("Please input 1, 2, or 3: ")
                     continue
