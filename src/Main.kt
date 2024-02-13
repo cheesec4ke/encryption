@@ -5,17 +5,20 @@ fun main() {
             val op = readln()
             when (op) {
                 "1" -> {
-                    print("Input string to encrypt: ")
+                    print("Input text to encrypt: ")
                     val input = readln()
                     print("Input encryption length from 1 to 256: ")
                     while (true) {
-                        val key = readln().toInt() - 1
-                        if (key in 0..255) {
-                            println(enc(input, key))
-                            break
-                        } else {
+                        try {
+                            val key = readln().toInt() - 1
+                            if (key in 0..255) {
+                                println("Encrypted string:\n\t${enc(input, key)}\n")
+                                break
+                            } else {
+                                print("Please input a number between 1 and 256: ")
+                            }
+                        } catch (e: NumberFormatException) {
                             print("Please input a number between 1 and 256: ")
-                            continue
                         }
                     }
                     break
@@ -24,7 +27,7 @@ fun main() {
                 "2" -> {
                     print("Input string to decrypt: ")
                     val input = readln()
-                    println(dec(input))
+                    println("Decrypted text:\n\t${dec(input)}\n")
                     break
                 }
 
@@ -32,14 +35,8 @@ fun main() {
                     println("\n\to/\n");print(0 / 0)
                 }
 
-                "4" -> {
-                    println("\u0394")
-                    break
-                }
-
                 else -> {
                     print("Please input 1, 2, or 3: ")
-                    continue
                 }
             }
         }
