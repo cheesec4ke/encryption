@@ -1,1 +1,1 @@
-test project to figure out how to use github
+test project to learn kotlin and figure out how to use github
