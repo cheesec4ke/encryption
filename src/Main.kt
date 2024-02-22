@@ -1,4 +1,5 @@
 fun main() {
+    val lines = arrayOf('|', 'ǀ', '│', '❘', 'ㅣ', '∣', '〡', '⎜', '⎟', '⎢', '⎥', '⎪', '⎮', '⎸', '⎹', '⏐')
     while (true) {
         print("Input 1 for encryption, 2 for decryption, or 3 to exit: ")
         while (true) {
@@ -12,7 +13,7 @@ fun main() {
                         try {
                             val key = readln().toInt() - 1
                             if (key in 0..255) {
-                                println("Encrypted string:\n\t${enc(input, key)}\n")
+                                println("Encrypted string:\n\n\t${enc(input, key)}\n")
                                 break
                             } else {
                                 print("Please input a number between 1 and 256: ")
@@ -26,13 +27,21 @@ fun main() {
 
                 "2" -> {
                     print("Input string to decrypt: ")
-                    val input = readln()
-                    println("Decrypted text:\n\t${dec(input)}\n")
+                    while (true) {
+                        val input = readln()
+                        if (input[0] in lines) {
+                            println("Decrypted text:\n\n\t${dec(input)}\n")
+                            break
+                        } else {
+                            print("Please input a valid input string: ")
+                        }
+                    }
                     break
                 }
 
                 "3" -> {
-                    println("\n\to/\n");print(0 / 0)
+                    println("\n\to/\n")
+                    print(0 / 0)
                 }
 
                 else -> {
