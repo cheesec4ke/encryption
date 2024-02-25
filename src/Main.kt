@@ -1,5 +1,6 @@
 fun main() {
     val lines = arrayOf('|', 'ǀ', '│', '❘', 'ㅣ', '∣', '〡', '⎜', '⎟', '⎢', '⎥', '⎪', '⎮', '⎸', '⎹', '⏐')
+    //("\u007c", "\u01c0", "\u2502", "\u2758", "\u3163", "\u2223", "\u3021", "\u239c", "\u239f", "\u23a2", "\u23a5", "\u23aa", "\u23ae", "\u23b8", "\u23b9", "\u23d0")
     while (true) {
         print("Input 1 for encryption, 2 for decryption, or 3 to exit: ")
         while (true) {
